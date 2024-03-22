@@ -1,0 +1,112 @@
+.col-lg-6{
+    flex: 0 0 auto;
+    width: 50%;
+}
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    position: relative;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all .5s ease-in-out;
+    box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
+    z-index: 1;
+    }
+.menu-item-img {
+    position: relative;
+}
+.menu-item img {
+    width: 70px;
+    border-radius: 50%;
+}
+.menu-item-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.menu-item-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #C7A17A;
+    padding-left: 25px;
+    margin-left: 8px;
+    border-left: 2px dashed #C7A17A;
+}
+.counter-area {
+    position: relative;
+    background: #C7A17A;
+    z-index: 1;
+}
+.counter-box .icon img {
+    cursor: pointer;
+    width: 130px;
+}
+.counter-box .title {
+    color: #1F2226;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.shop-item {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #F6F6F6;
+}
+.shop-item-img {
+    padding: 30px 10px;
+    position: relative;
+    z-index: 1;
+}
+.shop-item-sale {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 47px;
+    border-radius: 50%;
+    text-align: center;
+    right: 10px;
+    top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #C7A17A;
+}
+.shop-item-meta {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 3;
+    transition: all .5s ease-in-out;
+}
+.shop-item-meta a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 43px;
+    border-radius: 50px;
+    text-align: center;
+    background: #fff;
+    color: #C7A17A;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.shop-item-info {
+    padding-top: 7px;
+    text-align: center;
+}
+.shop-item-rate {
+    margin-bottom: 5px;
+    color: #C7A17A;
+}
+.shop-item-price {
+    font-size: 18px;
+    color: #C7A17A;
+    font-weight: 700;
+    margin-top: 5px;
+}

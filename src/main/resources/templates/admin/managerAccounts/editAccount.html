@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/layout_admin :: head-link"></head>
+
+<body data-sidebar="dark" data-layout-mode="light">
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+    <header  th:replace="admin/layout_admin :: header-page"></header>
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="vertical-menu"  th:replace="admin/layout_admin :: menu"></div>
+    <!-- Left Sidebar End -->
+
+    <!-- Nội dung -->
+
+    <!-- hết nội dung-->
+</div>
+<!-- END layout-wrapper -->
+
+<footer th:replace="admin/layout_admin :: footer"></footer>
+<!-- JAVASCRIPT -->
+<div th:replace="admin/layout_admin :: link-js"></div>
+</body>
+</html>

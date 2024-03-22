@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/layout_admin :: head-link"></head>
+
+<body data-sidebar="dark" data-layout-mode="light">
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+  <header  th:replace="admin/layout_admin :: header-page"></header>
+
+  <!-- ========== Left Sidebar Start ========== -->
+  <div class="vertical-menu"  th:replace="admin/layout_admin :: menu"></div>
+  <div class="main-content">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+
+          <h4 class="card-title">Table Edit</h4>
+          <p class="card-title-desc">Table Edits is a lightweight jQuery plugin for making table rows editable.</p>
+
+          <form th:action ="@{/admin/managerRoles/add}" th:object = "${role}" method = "post" class="outer-repeater">
+            <div data-repeater-list="outer-group" class="outer">
+              <div data-repeater-item="" class="outer">
+                <div class="mb-3">
+                  <label for="name">Tên quyền:</label>
+                  <input type="text" th:field = "*{name}" class="form-control" id="name" placeholder="Nhập quyền...">
+                  <span class="text-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary" value="Save">Lưu</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+</div>
+<!-- END layout-wrapper -->
+
+<footer th:replace="admin/layout_admin :: footer"></footer>
+<!-- JAVASCRIPT -->
+<div th:replace="admin/layout_admin :: link-js"></div>
+</body>
+</html>

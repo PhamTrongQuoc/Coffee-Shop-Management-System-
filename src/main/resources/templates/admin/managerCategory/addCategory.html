@@ -1,0 +1,125 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head th:replace="admin/layout_admin :: head-link"></head>-->
+
+<!--<body data-sidebar="dark" data-layout-mode="light">-->
+
+<!--&lt;!&ndash; Begin page &ndash;&gt;-->
+<!--<div id="layout-wrapper">-->
+<!--    <header  th:replace="admin/layout_admin :: header-page"></header>-->
+
+<!--    &lt;!&ndash; ========== Left Sidebar Start ========== &ndash;&gt;-->
+<!--    <div class="vertical-menu"  th:replace="admin/layout_admin :: menu"></div>-->
+<!--    &lt;!&ndash; Left Sidebar End &ndash;&gt;-->
+
+<!--    &lt;!&ndash; Nội dung &ndash;&gt;-->
+
+<!--    &lt;!&ndash; hết nội dung&ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; END layout-wrapper &ndash;&gt;-->
+
+<!--<footer th:replace="admin/layout_admin :: footer"></footer>-->
+<!--&lt;!&ndash; JAVASCRIPT &ndash;&gt;-->
+<!--<div th:replace="admin/layout_admin :: link-js"></div>-->
+<!--</body>-->
+<!--</html>-->
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/layout_admin :: head-link"></head>
+
+<body data-sidebar="dark" data-layout-mode="light">
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+    <header  th:replace="admin/layout_admin :: header-page"></header>
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="vertical-menu"  th:replace="admin/layout_admin :: menu"></div>
+    <!-- Left Sidebar End -->
+
+    <!-- Nội dung -->
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <h4 class="card-title">
+                                  Thêm Loại Sản Phẩm
+
+                                </h4>
+
+
+                                <form th:action ="@{/admin/managerCategories/addCategory}" th:object ="${loai}" method = "post">
+                                    <div class="col-6 mb-3">
+<!--                                        <label class="form-label" for="TenLoai">Thêm Loại Sản Phẩm: </label>-->
+                                        <input class="form-control" type="text" th:field = "*{TenLoai}" id="TenLoai">
+<!--                                    <div class="col-6 mb-3">-->
+<!--                                        <label class="form-label" for="Anh">Ảnh sản phẩm:  </label>-->
+<!--                                        <input class="form-control" type="text" th:field = "*{Anh}" id="Anh">-->
+<!--                                        <span class="text-danger" th:if="${#fields.hasErrors('Anh')}" th:errors="*{Anh}"></span>-->
+
+<!--                                        <input class="form-control" type="file" th:field = "*{Anh}" id="Anh"  >-->
+<!--                                        <button type="button" onclick="chooseImage()">Chọn ảnh</button>-->
+<!--                                        <input type="submit" value="Upload">-->
+
+<!--                                    </div>-->
+
+
+                                    <input type="submit" class="btn btn-primary" value="Save">
+                                    </div>
+                                </form>
+                                <script>
+        function chooseImage() {
+            document.getElementById("Anh").click();
+        }
+    </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+            </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+
+        <!--    <footer class="footer">-->
+        <!--      <div class="container-fluid">-->
+        <!--        <div class="row">-->
+        <!--          <div class="col-sm-6">-->
+        <!--            <script>document.write(new Date().getFullYear())</script> © Skote.-->
+        <!--          </div>-->
+        <!--          <div class="col-sm-6">-->
+        <!--            <div class="text-sm-end d-none d-sm-block">-->
+        <!--              Design & Develop by Themesbrand-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+        <!--      </div>-->
+        <!--    </footer>-->
+    </div>
+    <!-- end main content-->
+</div>
+<!-- END layout-wrapper -->
+
+<footer th:replace="admin/layout_admin :: footer"></footer>
+<!-- JAVASCRIPT -->
+<div th:replace="admin/layout_admin :: link-js"></div>
+
+</body>
+</html>

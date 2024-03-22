@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/layout_admin :: head-link"></head>
+
+<body data-sidebar="dark" data-layout-mode="light">
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+    <header  th:replace="admin/layout_admin :: header-page"></header>
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="vertical-menu"  th:replace="admin/layout_admin :: menu"></div>
+    <!-- Left Sidebar End -->
+
+    <!-- Nội dung -->
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <h4 class="card-title">Edit Brand</h4>
+                                <p class="card-title-desc">Edit a brand</p>
+
+                                <form th:action="@{/admin/managerBrands/editBrand}" th:object="${brand}" method="post">
+                                    <input type="hidden" th:field="*{MaTH}">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="mb-3">
+                                                <label for="TenTH">Tên thương hiệu</label>
+                                                <input id="TenTH" type="text" th:field="*{TenTH}" class="form-control">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="DiaChiTH">Địa chỉ</label>
+                                                <input id="DiaChiTH" type="text" th:field="*{DiaChiTH}" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="mb-3">
+                                                <label for="AnhTH">Logo thương hiệu</label>
+                                                <input class="form-control" id="AnhTH" th:field="*{AnhTH}"></input>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hết nội dung-->
+    </div>
+<!-- END layout-wrapper -->
+
+<footer th:replace="admin/layout_admin :: footer"></footer>
+<!-- JAVASCRIPT -->
+<div th:replace="admin/layout_admin :: link-js"></div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile </title>
+    <th:block
+            th:replace = "layout ::  link-css">
+    </th:block>
+</head>
+<body>
+<th:block th:replace ="layout :: header"></th:block>
+<aside class="profile-card">
+
+    <header>
+
+        <!-- Link  Hình của bạn -->
+
+
+        <!-- Tên của bạn -->
+        <h1>Phạm Trọng Quốc </h1>
+
+        <!-- Nickname -->
+
+
+    </header>
+
+    <!-- Thêm thông tin database tại đây -->
+    <div class="profile-bio">
+<!---->
+
+    </div>
+
+    <!-- Liên kết mạng xã hội -->
+    <ul class="profile-social-links">
+
+        <!-- Thông tin tài khoản twitter -->
+        <li>
+            <a th:href="https://twitter.com/">
+<!--                <img th:src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-twitter.svg">-->
+            </a>
+        </li>
+
+        <!-- Thông tin Facebook -->
+        <li>
+            <a th:href="https://facebook.com">
+<!--                <img th:src="http://farm5.staticflickr.com/4221/34651248062_73641b1a80_o.png">-->
+            </a>
+        </li>
+
+        <!-- Tài khoản Google +-->
+        <li>
+            <a th:href="https://plus.google.com/u/0/118260931574775251745/posts">
+<!--                <img th:src="http://farm5.staticflickr.com/4186/34004419773_ed97040ef5_o.png">-->
+            </a>
+        </li>
+
+
+
+    </ul>
+
+</aside>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/layout_admin :: head-link">
+
+</head>
+
+<body data-sidebar="dark" data-layout-mode="light">
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+  <header  th:replace="admin/layout_admin :: header-page"></header>
+
+  <!-- ========== Left Sidebar Start ========== -->
+  <div class="vertical-menu"  th:replace="admin/layout_admin :: menu"></div>
+  <!-- Left Sidebar End -->
+
+  <!-- Nội dung -->
+  <div class="main-content">
+
+    <div class="page-content">
+      <div class="container-fluid">
+        <!-- start page title -->
+        <div class="row">
+          <div class="col-12">
+            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+
+            </div>
+          </div>
+        </div>
+        <!-- end page title -->
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+
+                <h4 class="card-title">
+                  Loại Sản Phẩm
+                </h4>
+                <p class="card-title-desc">Sửa thông tin loai sản phẩm</p>
+
+                <form th:action ="@{/admin/managerCategories/edit}" th:object = "${loai}" method = "post">
+                  <input type="hidden" th:field ="*{id}">
+                  <div class="col-6 mb-3">
+                    <label class="form-label" for="TenLoai">Tên Loại: </label>
+                    <input class="form-control" type="text" th:field = "*{TenLoai}" id="TenLoai">
+                  </div>
+<!--                  <div class="col-6 mb-3">-->
+<!--                    <label class="form-label" for="Anh">Ảnh: </label>-->
+<!--                    <input class="form-control" type="text" th:field = "*{Anh}" id="Anh">-->
+<!--                  </div>-->
+                  <input type="submit" class="btn btn-primary" value="Save">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+
+      </div> <!-- container-fluid -->
+    </div>
+    <!-- End Page-content -->
+
+
+    <!--    <footer class="footer">-->
+    <!--      <div class="container-fluid">-->
+    <!--        <div class="row">-->
+    <!--          <div class="col-sm-6">-->
+    <!--            <script>document.write(new Date().getFullYear())</script> © Skote.-->
+    <!--          </div>-->
+    <!--          <div class="col-sm-6">-->
+    <!--            <div class="text-sm-end d-none d-sm-block">-->
+    <!--              Design & Develop by Themesbrand-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </footer>-->
+  </div>
+  <!-- end main content-->
+</div>
+<!-- END layout-wrapper -->
+
+<footer th:replace="admin/layout_admin :: footer"></footer>
+<!-- JAVASCRIPT -->
+<div th:replace="admin/layout_admin :: link-js"></div>
+
+</body>
+</html>
